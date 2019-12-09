@@ -29,7 +29,13 @@ public class SelfDivisor {
      * integers >= start that are self-divisors
      */
     public static int[] firstNumSelfDivisors(int start, int num) {/* to be implemented by the student */
-        int[] list = {1,2,3,4};
+        int[] list = new int[num] ;
+
+        for(int count=0; count<list.length-1;++count) {
+            if()
+        }
+
+
         return list;
     }
 
