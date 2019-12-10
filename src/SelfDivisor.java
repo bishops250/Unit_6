@@ -30,9 +30,21 @@ public class SelfDivisor {
      */
     public static int[] firstNumSelfDivisors(int start, int num) {/* to be implemented by the student */
         int[] list = new int[num] ;
+        int array_index=0;
 
-        for(int count=0; count<list.length-1;++count) {
-            if()
+
+        while(array_index<num ) {
+            if(isSelfDivisor(start)==true) {
+
+                list[array_index]= start;
+                array_index++;
+            }
+            start++;
+
+
+
+
+
         }
 
 
