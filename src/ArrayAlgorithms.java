@@ -14,7 +14,11 @@ return printed_array;
         boolean check_negative=true;
 
         for(int i=0; i<=list.length-1;++i) {
-            check_negative= list[i] <= 0;
+            if(list[i]>0) {
+                check_negative=false;
+            }
+            else
+                check_negative= true;
         }
 
         return check_negative;
@@ -46,7 +50,7 @@ return printed_array;
 
     public static int[] leftShift(int[] nums, int shift) {
 
-        int[] shifted_array = new int [nums.length+shift];
+        int shifted_array[]= new int [nums.length+shift];
         for(int i =0;i>=nums.length-1;++i) {
             for (int count = (shifted_array.length-1)-shift; count >= 0; --count) {
                 shifted_array[count]=nums[i]; //this doesn't work
