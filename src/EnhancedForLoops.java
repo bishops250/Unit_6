@@ -86,7 +86,7 @@ public class EnhancedForLoops {
         int[] integer_array ={1,2,3,4,5};
         double[] double_array ={1.1,2.2,3.3,4.4,5.5};
         String[] string_array = {"Bob","Jeff","Larry","Aron","Blake"};
-        
+
 
     }
 }

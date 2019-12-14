@@ -4,29 +4,26 @@ public class ArrayAlgorithms {
         String printed_array= "";
 
         for (int a:nums) {
-            printed_array += a +"";
+            printed_array += a +" ";
         }
 return printed_array;
     }
 
     public static boolean checkForAllNegatives(int[] list) {
-        boolean negative= true;
+
+        boolean check_negative=true;
+
         for(int i=0; i<=list.length-1;++i) {
-            if(list[i]>=0) {
-                return false;
-            }
-            else
-                return true;
+            check_negative= list[i] <= 0;
         }
 
-        return negative;
+        return check_negative;
     }
     public static boolean hasDupes(int[] list) {
-        int test_num;
-        boolean duplicate;
 
-        for(int i=0; i<list.length-1;++i) {
-            for( int count= i+1; i<list.length-1;++count) {
+
+        for(int i=0; i<=list.length-1;++i) {
+            for( int count= i+1; i<=list.length-1;++count) {
                 if(list[i]==list[count]) {
                     return true;
                 }
@@ -49,11 +46,22 @@ return printed_array;
 
     public static int[] leftShift(int[] nums, int shift) {
 
-        int shifted_array[]= new int [nums+shift];
-
+        int[] shifted_array = new int [nums.length+shift];
+        for(int i =0;i>=nums.length-1;++i) {
+            for (int count = (shifted_array.length-1)-shift; count >= 0; --count) {
+                shifted_array[count]=nums[i]; //this doesn't work
+            }
+        }
+        return shifted_array;
     }
-    public static int [] reverseArray() {
-
+    public static int [] reverseArray(int[]nums) {
+       int temp_num;
+        for(int i =0;i<=nums.length-1;++i) {
+            temp_num= nums[i+1];
+            nums[i+1]=nums[i];
+            nums[i]= temp_num;
+        }
+return nums;
     }
 
 
