@@ -26,7 +26,7 @@ return check_negative;
 
 
         for(int i=0; i<=list.length-1;++i) { //First Loop Chooses Number checking for Duplicates
-            for( int count= i+1; i<list.length-1 && count <i;++count) { //Second Loop checks the numbers to the side of it.
+            for( int count= i+1; i<list.length-1;++count) { //Second Loop checks the numbers to the side of it.
                 if(list[i]==list[count]) {
                     return true;
                 }
