@@ -39,9 +39,9 @@ public class ArrayAlgorithmsTest {
         assertArrayEquals(new int[] {1, 1, 1, 0, 0, 0}, ArrayAlgorithms.leftShift(new int[] {1, 1, 1}, 3));
     }
 
-//    @Test
-//    public void reverseArrayTest() {
-//        assertEquals("2 5 0 3 4 1 8 9 4 7 5 ", ArrayAlgorithms.reverseArray(new int[] {5, 7, 4, 9, 8, 1, 4, 3, 0, 5, 2}));
-//        assertEquals("1 2 3 4 5 6 7 8 ", ArrayAlgorithms.reverseArray(new int[] {8, 7, 6, 5, 4, 3, 2, 1}));
-//    }
+    @Test
+    public void reverseArrayTest() {
+        assertEquals("2 5 0 3 4 1 8 9 4 7 5 ", ArrayAlgorithms.reverseArray(new int[] {5, 7, 4, 9, 8, 1, 4, 3, 0, 5, 2}));
+        assertEquals("1 2 3 4 5 6 7 8 ", ArrayAlgorithms.reverseArray(new int[] {8, 7, 6, 5, 4, 3, 2, 1}));
+    }
 }

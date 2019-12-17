@@ -26,7 +26,7 @@ return check_negative;
 
 
         for(int i=0; i<=list.length-1;++i) { //First Loop Chooses Number checking for Duplicates
-            for( int count= i+1; i<list.length-1;++count) { //Second Loop checks the numbers to the side of it.
+            for( int count= i+1; count<=list.length-1;++count) { //Second Loop checks the numbers to the side of it.
                 if(list[i]==list[count]) {
                     return true;
                 }
@@ -58,14 +58,14 @@ return check_negative;
         return shifted_array;
         }
 
-    public static int [] reverseArray(int[]nums) {
+    public static String reverseArray(int[]nums) {
        int temp_num;
-        for(int i =0;i<=nums.length-1;++i) {
-            temp_num= nums[i+1];
-            nums[i+1]=nums[i];
-            nums[i]= temp_num;
-        }
-return nums;
+       String print_reverse_array= "";
+        for(int i=nums.length-1;i>=0;--i) {
+         print_reverse_array += nums[i] + " ";
+         }
+
+return print_reverse_array;
     }
 
 
