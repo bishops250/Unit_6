@@ -59,13 +59,15 @@ return check_negative;
         }
 
     public static String reverseArray(int[]nums) {
-       int temp_num;
-       String print_reverse_array= "";
-        for(int i=nums.length-1;i>=0;--i) {
-         print_reverse_array += nums[i] + " ";
-         }
 
-return print_reverse_array;
+        int temp_num;
+        for (int i = 0; i < nums.length/2; i++) {
+            temp_num = nums[i];
+            nums[i] = nums[nums.length-1-i];
+            nums[nums.length-1-i]= temp_num;
+
+        }
+return printArray(nums);
     }
 
 
