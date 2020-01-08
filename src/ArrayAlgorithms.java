@@ -6,7 +6,7 @@ public class ArrayAlgorithms {
         for (int a:nums) {
             printed_array += a +" ";
         }
-return printed_array;
+        return printed_array;
     }
 
     public static boolean checkForAllNegatives(int[] list) {
@@ -20,7 +20,7 @@ return printed_array;
             else
                 check_negative= true;
         }
-return check_negative;
+        return check_negative;
     }
     public static boolean hasDupes(int[] list) {
 
@@ -50,22 +50,24 @@ return check_negative;
     public static int[] leftShift(int[] nums, int shift) {
 
         //I probably should be going backwards counting.
-        int shifted_array[]= new int [nums.length+shift];
+        int[] shifted_array = new int [nums.length+shift];
         for(int i =0;i<=nums.length-1;++i) {
-           shifted_array[i]=nums[i];
+            shifted_array[i]=nums[i];
 
-            }
-        return shifted_array;
         }
+        return shifted_array;
+    }
 
     public static String reverseArray(int[]nums) {
-       int temp_num;
-       String print_reverse_array= "";
-        for(int i=nums.length-1;i>=0;--i) {
-         print_reverse_array += nums[i] + " ";
-         }
 
-return print_reverse_array;
+        int temp_num;
+        for (int i = 0; i < nums.length/2; i++) {
+            temp_num = nums[i];
+            nums[i] = nums[nums.length-1-i];
+            nums[nums.length-1-i]= temp_num;
+
+        }
+        return printArray(nums);
     }
 
 
